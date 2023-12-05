@@ -7,7 +7,6 @@ interface Auto {
   acelear():void;
 }
 
-
 const conducirBatimovil = ( auto:Auto ):void => {
   auto.encender = true;
   auto.velocidadMaxima = 100;
@@ -22,8 +21,9 @@ const batimovil:Auto = {
   }
 }
 
-// Cree una interfaz con que permita utilizar el siguiente objeto
+// Cree una interfaz con que permita utilzar el siguiente objeto
 // utilizando propiedades opcionales
+
 interface Guason {
   reir?: boolean;
   comer?: boolean;
@@ -44,22 +44,18 @@ const reir = ( guason:Guason ):void => {
 
 
 // Cree una interfaz para la siguiente funcion
+
 interface CiudadGoticaFn {
-  (ciudadanos: string[]): number
+  ( ciudadanos:string[] ):number;
 }
+
 const ciudadGotica:CiudadGoticaFn = ( ciudadanos:string[] ):number => {
   return ciudadanos.length;
 }
 
 // Cree una interfaz que obligue crear una clase
 // con las siguientes propiedades y metodos
-interface PersonaInterface {
-  edad: number;
-  estadoCivil: string;
-  nombre: string;
-  sexo: string;
-  imprimirBio():void;
-}
+
 /*
   propiedades:
     - nombre
@@ -68,13 +64,22 @@ interface PersonaInterface {
     - estadoCivil
     - imprimirBio(): void // en consola una breve descripcion.
 */
-class Persona implements PersonaInterface {
-  public edad: number;
-  public estadoCivil: string;
-  public nombre: string;
-  public sexo: string;
 
+interface PersonaInterface {
+  nombre: string;
+  edad: number;
+  sexo: string;
+  estadoCivil: string;
+  imprimirBio():void;
+}
+
+class Persona implements PersonaInterface {
+  nombre: string;
+  edad: number;
+  sexo: string;
+  estadoCivil: string;
+  
   imprimirBio() {
-    
+
   }
 }
